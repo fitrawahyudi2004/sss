@@ -1,0 +1,25 @@
+ let wel = API('lolhuman', '/api/base/welcome', {
+                                apikey:'fitra_wahyudi_'
+                                img1: pp,
+                                img2: ppgc,
+                                background: "https://i.ibb.co/KhtRxwZ/dark.png",
+                                username: await this.getName(user),
+                                member: 'MemberCount: ' + groupMetadata.participants.length,
+                                groupname: await this.getName(id),
+                            })
+                            let lea = API('lolhuman', '/api/base/leave', {
+                                apikey:'fitra_wahyudi_'
+                                img1: pp,
+                                img2: ppgc,
+                                background: "https://i.ibb.co/KhtRxwZ/dark.png",
+                                username: await this.getName(user),
+                                member: 'MemberCount: ' + groupMetadata.participants.length,
+                                groupname: await this.getName(id),
+                            })
+
+                    this.sendFile(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), 'pp.jpg', text, null, false, {
+                      contextInfo: {
+                      mentionedJid: [user]
+                }
+              })
+  
